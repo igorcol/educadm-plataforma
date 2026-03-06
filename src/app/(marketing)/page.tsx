@@ -3,6 +3,7 @@
 import { Button } from "../../components/ui/button"
 import { VirtuesSection } from "../../components/sections/virtues-section"
 import { motion } from "framer-motion"
+import { CoreLoopSection } from "@/components/sections/core-loop-section";
 
 export default function MarketingPage() {
   return (
@@ -72,6 +73,9 @@ export default function MarketingPage() {
 
       {/* SEÇÃO 2: RELICÁRIO DE VIRTUDES & PATENTES */}
       <VirtuesSection />
+
+      {/* SEÇÃO 3: O CORE LOOP (NOVO) */}
+      <CoreLoopSection />
 
     </div>
   )

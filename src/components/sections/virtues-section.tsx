@@ -89,10 +89,10 @@ export function VirtuesSection() {
             
             {["Forasteiro", "Iniciático", "DeMolay", "Cavaleiro", "Chevalier"].map((patente, index) => (
               <div key={patente} className="flex flex-col items-center gap-3 bg-white px-4">
-                <div className={`h-10 w-10 rounded-full flex items-center justify-center border-2 transition-colors duration-500 delay-[1000ms] ${index === 1 ? 'border-[#00204A] bg-[#00204A] text-white shadow-lg' : index < 1 ? 'border-[#00204A] bg-white text-[#00204A]' : 'border-slate-200 bg-white text-slate-400'}`}>
+                <div className={`h-10 w-10 rounded-full flex items-center justify-center border-2 transition-colors duration-500 delay-1000 ${index === 1 ? 'border-[#00204A] bg-[#00204A] text-white shadow-lg' : index < 1 ? 'border-[#00204A] bg-white text-[#00204A]' : 'border-slate-200 bg-white text-slate-400'}`}>
                   {index === 1 ? <Shield className="h-5 w-5" /> : <span className="text-sm font-bold">{index + 1}</span>}
                 </div>
-                <span className={`text-sm font-bold tracking-wide uppercase transition-colors duration-500 delay-[1000ms] ${index <= 1 ? 'text-[#00204A]' : 'text-slate-400'}`}>{patente}</span>
+                <span className={`text-sm font-bold tracking-wide uppercase transition-colors duration-500 delay-1000 ${index <= 1 ? 'text-[#00204A]' : 'text-slate-400'}`}>{patente}</span>
               </div>
             ))}
           </div>
@@ -137,7 +137,7 @@ export function VirtuesSection() {
               </div>
 
               {/* Call to Action Interativo Oculto */}
-              <div className="hidden md:flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-x-[-20px] group-hover:translate-x-0 pr-4">
+              <div className="hidden md:flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-x-5 group-hover:translate-x-0 pr-4">
                 <span className="text-sm font-bold text-slate-900 uppercase tracking-wider">Visualizar</span>
                 <ArrowRight className="h-5 w-5 text-slate-900" />
               </div>
