@@ -4,6 +4,7 @@ import { Button } from "../../components/ui/button"
 import { VirtuesSection } from "../../components/sections/virtues-section"
 import { motion } from "framer-motion"
 import { CoreLoopSection } from "@/components/sections/core-loop-section";
+import { ManifestoSection } from "@/components/sections/manifest-section";
 
 export default function MarketingPage() {
   return (
@@ -76,6 +77,9 @@ export default function MarketingPage() {
 
       {/* SEÇÃO 3: O CORE LOOP (NOVO) */}
       <CoreLoopSection />
+
+      {/* SEÇÃO 4: MANIFESTO & CTA (NOVO) */}
+      <ManifestoSection />
 
     </div>
   )
