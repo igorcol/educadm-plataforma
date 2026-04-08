@@ -35,6 +35,10 @@ export default function HeroSection() {
         >
             {/* Fundo */}
             <div className="absolute inset-0 pointer-events-none" aria-hidden>
+
+                {/* Grid Pattern */}
+                <HeroGrid/>
+
                 <div
                     className="absolute inset-0 opacity-[0.35]"
                     style={{
@@ -214,18 +218,12 @@ export default function HeroSection() {
                     </div>
 
                     {/* Matéria */}
-                    <div
-                        className="text-[10px] font-semibold uppercase tracking-widest mb-1.5"
-                        style={{ color: "#94a3b8" }}
-                    >
+                    <div className="text-[10px] font-semibold uppercase tracking-widest mb-1.5" style={{ color: "#94a3b8" }}>
                         Matemática · Funções
                     </div>
 
                     {/* Questão */}
-                    <p
-                        className="text-[14px] font-semibold leading-snug mb-4"
-                        style={{ color: "#0f172a" }}
-                    >
+                    <p className="text-[14px] font-semibold leading-snug mb-4" style={{ color: "#0f172a" }}>
                         Qual é o domínio da função f(x) = √(x² − 9)?
                     </p>
 
@@ -444,3 +442,31 @@ export default function HeroSection() {
         </section>
     )
 }
+
+
+// Grid Pattern
+const HeroGrid = () => (
+    <svg
+        className="absolute inset-0 w-full h-full pointer-events-none opacity-[0.4]"
+        aria-hidden="true"
+    >
+        <defs>
+            <pattern
+                id="hero-grid-pattern"
+                width="40"
+                height="40"
+                patternUnits="userSpaceOnUse"
+                x="50%"
+                y="-1px"
+            >
+                <path 
+                    d="M.5 40V.5H40" 
+                    fill="none" 
+                    stroke="#e2e8f0" 
+                    strokeWidth="1" 
+                />
+            </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#hero-grid-pattern)" />
+    </svg>
+)
