@@ -32,9 +32,9 @@ export function MarketingHeader() {
       transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
     >
       <div
-        className="pointer-events-auto flex items-center justify-between w-full px-4 py-2.5"
+        className="pointer-events-auto flex items-center justify-between w-full px-6 py-3.5"
         style={{
-          maxWidth: "760px",
+          maxWidth: "920px",
           borderRadius: "14px",
           background: scrolled ? "rgba(255,255,255,0.96)" : "rgba(255,255,255,0.88)",
           border: "1px solid #e2e8f0",
@@ -55,7 +55,7 @@ export function MarketingHeader() {
         >
           <span
             style={{
-              fontSize: "15px",
+              fontSize: "17px",
               fontWeight: 800,
               letterSpacing: "-0.03em",
               color: "#0f172a",
@@ -65,7 +65,7 @@ export function MarketingHeader() {
           </span>
           <span
             style={{
-              fontSize: "15px",
+              fontSize: "17px",
               fontWeight: 800,
               letterSpacing: "-0.03em",
               color: "#e11d48",
@@ -81,7 +81,7 @@ export function MarketingHeader() {
             <button
               key={link.label}
               onClick={() => scrollTo(link.href)}
-              className="text-[13px] font-medium px-3 py-1.5 rounded-lg"
+              className="text-[14px] font-medium px-4 py-2 rounded-lg"
               style={{
                 color: "#64748b",
                 background: "transparent",
@@ -105,14 +105,14 @@ export function MarketingHeader() {
 
         {/* CTA */}
         <button
-          className="text-[13px] font-bold"
+          className="text-[14px] font-bold"
           style={{
             background: "#e11d48",
             color: "#ffffff",
             border: "none",
             cursor: "pointer",
-            padding: "8px 22px",
-            borderRadius: "10px",
+            padding: "10px 28px",
+            borderRadius: "8px",
             letterSpacing: "0.01em",
             transition: "background 0.25s cubic-bezier(0.16,1,0.3,1), box-shadow 0.25s ease",
           }}
