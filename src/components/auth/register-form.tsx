@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Input, Label } from "../ui/input";
 import { Button } from "../ui/button";
 import { ChevronRight } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 type City = "Sorocaba" | "Campinas" | "São Paulo";
 const CHAPTERS_MOCK: Record<City, string[]> = {
@@ -15,6 +16,13 @@ const CHAPTERS_MOCK: Record<City, string[]> = {
 
 export function RegisterForm() {
   const [selectedCity, setSelectedCity] = useState<City | "">("");
+  const router = useRouter(); // 2. Instancie o router
+
+  // Submit
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault(); 
+    router.push("/"); 
+  };
 
   return (
     <motion.form 
@@ -22,6 +30,7 @@ export function RegisterForm() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
       className="w-full max-w-105 flex flex-col items-center gap-6"
+      onSubmit={handleSubmit}
     >
       
       {/* ── CARD ÚNICO E SÓLIDO (Padrão Stripe/Vercel) ── */}
@@ -93,9 +102,10 @@ export function RegisterForm() {
 
           {/* BOTÃO INTEGRADO AO CARD COM VERMELHO MAIS ELEGANTE */}
           <Button 
+            type="submit" // Garante que o botão dispara o form
             className="w-full h-12 mt-2 bg-[#be123c] hover:bg-[#9f1239] text-white rounded-lg font-bold text-[15px] shadow-sm hover:shadow-md transition-all flex items-center justify-center gap-2"
           >
-            Criar Minha Conta
+            Cadastrar Conta
             <ChevronRight className="w-4 h-4" />
           </Button>
 
