@@ -5,7 +5,7 @@ import { Button } from "../ui/button";
 
 export function ManifestoSection() {
   return (
-    <section className="relative w-full">
+    <section id="manifesto" className="relative w-full">
       {/* O Manifesto (Espaço em Branco Absoluto) */}
       <div className="py-32 bg-white text-center px-6">
         <motion.div 

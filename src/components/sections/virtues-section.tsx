@@ -44,11 +44,11 @@ export function VirtuesSection() {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] as const } },
   };
 
   return (
-    <section className="py-24 bg-slate-50 relative border-t border-slate-100 overflow-hidden">
+    <section id="virtudes" className="py-24 bg-slate-50 relative border-t border-slate-100 overflow-hidden">
       <div className="max-w-4xl mx-auto px-6">
         
         {/* Título da Seção Animado */}

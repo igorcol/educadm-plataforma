@@ -8,12 +8,12 @@ export function CoreLoopSection() {
   const [activeMode, setActiveMode] = useState<"sprint" | "deep">("sprint");
 
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
+    <section id="como-funciona" className="py-24 bg-white relative overflow-hidden">
       <div className="max-w-5xl mx-auto px-6">
-        
+
         {/* Header da Seção */}
         <div className="text-center mb-16">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -21,7 +21,7 @@ export function CoreLoopSection() {
           >
             O Mecanismo
           </motion.div>
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -30,7 +30,7 @@ export function CoreLoopSection() {
           >
             Adaptável ao seu tempo.
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -42,7 +42,7 @@ export function CoreLoopSection() {
         </div>
 
         {/* O Toggle Switch SaaS */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
@@ -66,7 +66,7 @@ export function CoreLoopSection() {
             </button>
 
             {/* Fundo Deslizante Animado */}
-            <div 
+            <div
               className={`absolute top-1.5 bottom-1.5 w-[calc(50%-6px)] rounded-xl transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] shadow-md ${activeMode === "sprint" ? "left-1.5 bg-[#E3000F]" : "left-[calc(50%+4.5px)] bg-[#00204A]"}`}
             />
           </div>
