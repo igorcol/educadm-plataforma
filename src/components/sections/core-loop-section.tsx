@@ -28,7 +28,7 @@ export function CoreLoopSection() {
             transition={{ delay: 0.1 }}
             className="text-3xl md:text-5xl font-extrabold text-[#00204A] mb-6 tracking-tight"
           >
-            Adaptável ao seu tempo.
+            Ajuste ao seu tempo.
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -37,7 +37,7 @@ export function CoreLoopSection() {
             transition={{ delay: 0.2 }}
             className="text-lg md:text-xl text-slate-500 max-w-2xl mx-auto font-light"
           >
-            Não exija 2 horas de quem só tem 15 minutos. Escolha o ritmo da batalha.
+            Não dá pra exigir 2 horas de quem só tem 15 minutos. Sistema flexivel, você escolhe o modo.
           </motion.p>
         </div>
 
@@ -86,10 +86,10 @@ export function CoreLoopSection() {
               >
                 <div>
                   <h3 className="text-3xl font-black text-slate-900 mb-4 tracking-tight">
-                    Micro-vitórias diárias.
+                    Micro vitórias diárias.
                   </h3>
                   <p className="text-lg text-slate-500 mb-8 leading-relaxed">
-                    Tá no busão? Na fila da cantina? 3 minutos são suficientes. Questões rápidas, diretas ao ponto e com feedback imediato. A dose de dopamina produtiva que você precisa.
+                    No busão ou na fila da cantina? Cinco minutos são suficientes. Responda, veja o gabarito, entenda o erro. Feche o celular sabendo que o dia rendeu alguma coisa.
                   </p>
                   <ul className="space-y-4 mb-8">
                     <li className="flex items-center gap-3 text-slate-700 font-medium">
@@ -132,7 +132,7 @@ export function CoreLoopSection() {
               >
                 <div>
                   <h3 className="text-3xl font-black text-slate-900 mb-4 tracking-tight">
-                    O simulador de guerra.
+                    O simulado.
                   </h3>
                   <p className="text-lg text-slate-500 mb-8 leading-relaxed">
                     Chegou em casa e quer moer? Ativa o modo foco. Simulados reais da USP, UNICAMP e ENEM. Bloqueio de distrações, provas longas e o peso real que o vestibular exige.

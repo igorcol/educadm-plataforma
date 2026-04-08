@@ -12,7 +12,7 @@ export function VirtuesSection() {
       hoverTextClass: "group-hover:text-[#E3000F]",
       shadowClass: "group-hover:shadow-[0_0_30px_rgba(227,0,15,0.3)]",
       title: "Fidelidade (Streak)",
-      description: "Mantenha o ritmo. Um streak de 7 dias seguidos acende o brasão da Fidelidade no seu painel.",
+      description: "Sete dias seguidos. Sem desculpa. Quem não falta honra sua Fidelidade e nós reconhecemos isso.",
     },
     {
       num: "02",
@@ -27,10 +27,10 @@ export function VirtuesSection() {
       num: "03",
       icon: BookOpen,
       hoverBgClass: "group-hover:bg-[#FFC72C]",
-      hoverTextClass: "group-hover:text-[#D4A017]", // Dourado mais escuro pro texto não sumir no branco
+      hoverTextClass: "group-hover:text-[#D4A017]", 
       shadowClass: "group-hover:shadow-[0_0_30px_rgba(255,199,44,0.4)]",
       title: "Cortesia Intelectual",
-      description: "Um líder aprende com os erros. Leia as justificativas das falhas e transforme atrito em sabedoria.",
+      description: "Um líder aprende com os erros. Leia as justificativas das falhas e transforme erros em sabedoria.",
     },
   ];
 
@@ -50,9 +50,9 @@ export function VirtuesSection() {
   return (
     <section id="virtudes" className="py-24 bg-slate-50 relative border-t border-slate-100 overflow-hidden">
       <div className="max-w-4xl mx-auto px-6">
-        
+
         {/* Título da Seção Animado */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -61,16 +61,16 @@ export function VirtuesSection() {
         >
           <h2 className="text-3xl md:text-5xl font-extrabold text-[#00204A] mb-6 tracking-tight">
             Não é apenas estudo. <br className="hidden md:block" />
-            É construção de identidade.
+            É quem você decide ser.
           </h2>
           <p className="text-lg md:text-xl text-slate-500 max-w-2xl mx-auto font-light">
-            O sistema recompensa sua constância. Seu nível de domínio em cada universidade dita sua patente: 
-            <strong className="text-slate-900 font-semibold"> de Forasteiro a Chevalier.</strong>
+            Quanto mais você avança, maior seu mérito. Cada universidade tem sua própria trilha   Ou não termina.
+            <strong className="text-slate-900 font-semibold"> você começa Forasteiro e termina Chevalier.</strong>
           </p>
         </motion.div>
 
         {/* Barra de Patentes Animada (Mantivemos porque o visual da linha do tempo é excelente) */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
@@ -79,14 +79,14 @@ export function VirtuesSection() {
         >
           <div className="flex justify-between items-center relative px-4">
             <div className="absolute left-0 top-1/2 w-full h-1 bg-slate-100 -z-10 transform -translate-y-1/2 rounded-full"></div>
-            <motion.div 
+            <motion.div
               initial={{ width: 0 }}
               whileInView={{ width: "33%" }}
               viewport={{ once: true }}
               transition={{ duration: 1.5, delay: 0.5, ease: "easeInOut" }}
               className="absolute left-0 top-1/2 h-1 bg-[#00204A] -z-10 transform -translate-y-1/2 rounded-full"
             ></motion.div>
-            
+
             {["Forasteiro", "Iniciático", "DeMolay", "Cavaleiro", "Chevalier"].map((patente, index) => (
               <div key={patente} className="flex flex-col items-center gap-3 bg-white px-4">
                 <div className={`h-10 w-10 rounded-full flex items-center justify-center border-2 transition-colors duration-500 delay-1000 ${index === 1 ? 'border-[#00204A] bg-[#00204A] text-white shadow-lg' : index < 1 ? 'border-[#00204A] bg-white text-[#00204A]' : 'border-slate-200 bg-white text-slate-400'}`}>
@@ -99,7 +99,7 @@ export function VirtuesSection() {
         </motion.div>
 
         {/* O NOVO "QUEST LOG" (Zero Cards Clichês) */}
-        <motion.div 
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -107,8 +107,8 @@ export function VirtuesSection() {
           className="flex flex-col w-full relative"
         >
           {features.map((feature, i) => (
-            <motion.div 
-              key={i} 
+            <motion.div
+              key={i}
               variants={itemVariants}
               // O "group" aqui é a magia. Ele rastreia o hover na linha inteira.
               className="group relative flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-10 py-10 md:px-6 border-b border-slate-200 cursor-crosshair transition-all duration-300"
@@ -123,7 +123,7 @@ export function VirtuesSection() {
 
               {/* Ícone com Mutação de Cor */}
               <div className={`relative h-16 w-16 shrink-0 rounded-full bg-slate-100 flex items-center justify-center transition-all duration-300 ${feature.hoverBgClass} ${feature.shadowClass}`}>
-                 <feature.icon className="h-8 w-8 text-slate-400 group-hover:text-white transition-colors duration-300" />
+                <feature.icon className="h-8 w-8 text-slate-400 group-hover:text-white transition-colors duration-300" />
               </div>
 
               {/* Conteúdo Textual */}

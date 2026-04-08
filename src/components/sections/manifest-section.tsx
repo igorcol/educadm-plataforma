@@ -19,7 +19,7 @@ export function ManifestoSection() {
             Você já tem escola.<br/>Você já tem cursinho.
           </h2>
           <p className="text-xl md:text-2xl text-slate-500 font-light leading-relaxed">
-            O Educa DeMolay SP não é mais uma obrigação na sua agenda. É o seu trunfo tático. Zero atrito. Sem PDFs infinitos. Se você precisa de mais de 3 cliques para começar a estudar, nosso design falhou. <br/><strong className="text-slate-900 font-medium">Nós não falhamos.</strong>
+            O Educa DeMolay SP não é mais uma obrigação na sua agenda. É o que você abre quando tem 5 minutos sobrando. Sem PDF. 
           </p>
         </motion.div>
       </div>
@@ -45,7 +45,7 @@ export function ManifestoSection() {
           
           <div className="mt-12 flex flex-col sm:flex-row justify-center gap-4">
             <Button variant="demolay" className="h-16 px-10 text-lg font-black w-full sm:w-auto rounded-xl shadow-[0_0_40px_rgba(227,0,15,0.4)] hover:scale-105 transition-transform duration-300">
-              Acessar o Motor
+              Acessar
             </Button>
           </div>
           
