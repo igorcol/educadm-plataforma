@@ -64,8 +64,8 @@ export function VirtuesSection() {
             É quem você decide ser.
           </h2>
           <p className="text-lg md:text-xl text-slate-500 max-w-2xl mx-auto font-light">
-            Quanto mais você avança, maior seu mérito. Cada universidade tem sua própria trilha   Ou não termina.
-            <strong className="text-slate-900 font-semibold"> você começa Forasteiro e termina Chevalier.</strong>
+            Quanto mais você avança, maior seu mérito. Cada universidade tem sua própria trilha.
+            <strong className="text-slate-900 font-semibold"> Você começa Forasteiro e termina Chevalier.</strong>
           </p>
         </motion.div>
 

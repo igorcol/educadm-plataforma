@@ -111,65 +111,60 @@ export default function HeroSection() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.9, delay: 0.35, ease }}
             >
-                <div
-                    className="w-62 rounded-2xl p-4 flex items-center gap-3"
-                    style={{
-                        background: "#fffbeb",
-                        border: "1px solid #fde68a",
-                        boxShadow: "0 8px 40px rgba(15,23,42,0.1), 0 1px 4px rgba(15,23,42,0.04)",
-                    }}
-                >
-                    <div
-                        className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 text-base"
-                        style={{ background: "#fef3c7", border: "1px solid #fde68a" }}
-                    >
-                        ⚔️
+                {/* Virtude desbloqueada */}
+                <div className="relative group w-64 rounded-2xl bg-white/90 backdrop-blur-md p-4 flex items-center gap-4 border border-amber-200/40 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(245,158,11,0.15)] transition-all duration-300 overflow-hidden cursor-default">
+                    {/* Fundo Glow Dinâmico (Reage ao hover) */}
+                    <div className="absolute -left-4 -top-4 w-20 h-20 bg-amber-400/10 rounded-full blur-2xl group-hover:bg-amber-400/25 transition-all duration-500 z-0"></div>
+
+                    {/* Linha de Destaque Esquerda (O "Laser" de conquista) */}
+                    <div className="absolute left-0 top-0 bottom-0 w-1 bg-linear-to-b from-amber-400 to-orange-500 rounded-l-2xl z-10"></div>
+
+                    {/* Container do Ícone */}
+                    <div className="relative w-12 h-12 rounded-xl flex items-center justify-center shrink-0 bg-linear-to-br from-amber-50 to-orange-50 border border-amber-100 shadow-sm group-hover:scale-110 transition-transform duration-300 z-10">
+                        <span className="text-xl drop-shadow-sm">⚔️</span>
                     </div>
-                    <div className="min-w-0">
-                        <div
-                            className="text-[10px] font-bold uppercase tracking-[0.12em] mb-0.5"
-                            style={{ color: "#b45309" }}
-                        >
+
+                    {/* Container de Texto */}
+                    <div className="min-w-0 flex-1 relative z-10">
+                        <div className="text-[9px] font-black uppercase tracking-[0.15em] text-amber-600 mb-1 flex items-center gap-1.5">
+                            {/* Ponto de Notificação Pulsante */}
+                            <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse shadow-[0_0_8px_rgba(245,158,11,0.8)]"></span>
                             Virtude Desbloqueada
                         </div>
-                        <div className="text-[14px] font-bold" style={{ color: "#0f172a" }}>
+
+                        <div className="text-[15px] font-black text-slate-900 leading-none mb-1.5 tracking-tight">
                             Cortesia
                         </div>
-                        <div className="text-[12px]" style={{ color: "#92400e" }}>
-                            +150 XP · 3 dias consecutivos
+
+                        <div className="text-[11px] font-medium text-slate-500 truncate">
+                            <span className="text-amber-600 font-extrabold drop-shadow-sm">+150 XP</span> <span className="opacity-60">· 3 dias</span>
                         </div>
                     </div>
                 </div>
 
-                {/* Card secundário — Deep Work, logo abaixo */}
-                <div
-                    className="mt-3 w-62 rounded-xl p-3.5 flex items-center justify-between"
-                    style={{
-                        background: "#f8fafc",
-                        border: "1px solid #e2e8f0",
-                        boxShadow: "0 2px 12px rgba(15,23,42,0.05)",
-                    }}
-                >
-                    <div>
-                        <div
-                            className="text-[10px] font-bold uppercase tracking-widest mb-0.5"
-                            style={{ color: "#94a3b8" }}
-                        >
+                {/* Card secundário — Deep Work */}
+                <div className="relative group w-64 rounded-2xl bg-white/90 backdrop-blur-md p-4 flex items-center justify-between border border-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,32,74,0.08)] transition-all duration-300 overflow-hidden cursor-default mt-3">
+                    {/* Glow de Foco (Sutil, azul no fundo, reage ao hover) */}
+                    <div className="absolute -right-4 -bottom-4 w-24 h-24 bg-blue-50 rounded-full blur-2xl group-hover:bg-blue-100 transition-all duration-500 z-0"></div>
+
+                    {/* Linha de Destaque Esquerda (O "Laser" de Foco Absoluto) */}
+                    <div className="absolute left-0 top-0 bottom-0 w-1 bg-linear-to-b from-blue-500 to-[#00204A] rounded-l-2xl z-10"></div>
+
+                    <div className="relative z-10">
+                        <div className="text-[9px] font-black uppercase tracking-[0.15em] text-slate-500 mb-1.5 flex items-center gap-1.5">
+                            {/* Quadrado de "Gravação/Foco" */}
+                            <span className="w-1.5 h-1.5 rounded-sm bg-blue-600 shadow-[0_0_8px_rgba(37,99,235,0.4)]"></span>
                             Deep Work Mode
                         </div>
-                        <div className="text-[13px] font-semibold" style={{ color: "#0f172a" }}>
+                        <div className="text-[14px] font-black text-[#00204A] tracking-tight">
                             Simulado FUVEST 2024
                         </div>
                     </div>
-                    <div
-                        className="text-[11px] font-bold px-2 py-1 rounded-sm shrink-0"
-                        style={{
-                            background: "#fef3c7",
-                            color: "#b45309",
-                            border: "1px solid #fde68a",
-                        }}
-                    >
-                        90 questões
+
+                    {/* Badge Tático de Quantidade (Azul e Frio) */}
+                    <div className="relative z-10 text-[11px] font-black px-2.5 py-1.5 rounded-lg shrink-0 bg-blue-50/80 text-blue-700 border border-blue-100 flex items-center gap-1 shadow-sm backdrop-blur-sm">
+                        90
+                        <span className="text-[8px] font-bold uppercase tracking-widest text-blue-500 mt-px">Questões</span>
                     </div>
                 </div>
             </motion.div>
@@ -283,33 +278,6 @@ export default function HeroSection() {
             {/* ── CENTRO: conteúdo principal ── */}
             <div className="relative z-10 flex flex-col items-center text-center px-6 max-w-135 w-full">
 
-                {/* Badge */}
-                <motion.div
-                    initial={{ opacity: 0, y: 16 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0, ease }}
-                    className="mb-8"
-                >
-                    <span
-                        className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full"
-                        style={{
-                            border: "1px solid #e2e8f0",
-                            background: "transparent",
-                        }}
-                    >
-                        <span
-                            className="w-1.5 h-1.5 rounded-full animate-pulse"
-                            style={{ background: "#e11d48" }}
-                        />
-                        <span
-                            className="text-[11px] font-semibold uppercase tracking-widest"
-                            style={{ color: "#94a3b8" }}
-                        >
-                            Educa DeMolay SP · Beta Aberta
-                        </span>
-                    </span>
-                </motion.div>
-
                 {/* Headline */}
                 <motion.h1
                     initial={{ opacity: 0, y: 24 }}
@@ -326,7 +294,7 @@ export default function HeroSection() {
                             color: "#94a3b8",
                         }}
                     >
-                        Não é cursinho.
+                        Estude como DeMolay
                     </span>
                     <span
                         className="block"
@@ -336,17 +304,7 @@ export default function HeroSection() {
                             color: "#0f172a",
                         }}
                     >
-                        É companheiro
-                    </span>
-                    <span
-                        className="block"
-                        style={{
-                            fontSize: "clamp(44px, 5.5vw, 72px)",
-                            fontWeight: 800,
-                            color: "#0f172a",
-                        }}
-                    >
-                        de guerra.
+                        Passe como Chevalier
                     </span>
                 </motion.h1>
 
@@ -479,14 +437,7 @@ export default function HeroSection() {
                         >
                             ⚔️
                         </div>
-                        <div>
-                            <div className="text-[9px] font-bold uppercase tracking-[0.12em]" style={{ color: "#b45309" }}>
-                                Virtude Desbloqueada
-                            </div>
-                            <div className="text-[13px] font-bold" style={{ color: "#0f172a" }}>
-                                Cortesia · +150 XP
-                            </div>
-                        </div>
+
                     </div>
                 </motion.div>
             </div>
