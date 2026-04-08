@@ -2,11 +2,12 @@
 
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
+import Link from "next/link"
 
 const NAV_LINKS = [
-  { label: "Virtudes",       href: "#virtudes"       },
-  { label: "Como Funciona",  href: "#como-funciona"  },
-  { label: "Manifesto",      href: "#manifesto"      },
+  { label: "Virtudes", href: "#virtudes" },
+  { label: "Como Funciona", href: "#como-funciona" },
+  { label: "Manifesto", href: "#manifesto" },
 ]
 
 function scrollTo(href: string) {
@@ -91,11 +92,11 @@ export function MarketingHeader() {
               }}
               onMouseEnter={e => {
                 (e.currentTarget as HTMLButtonElement).style.color = "#0f172a"
-                ;(e.currentTarget as HTMLButtonElement).style.background = "#f8fafc"
+                  ; (e.currentTarget as HTMLButtonElement).style.background = "#f8fafc"
               }}
               onMouseLeave={e => {
                 (e.currentTarget as HTMLButtonElement).style.color = "#64748b"
-                ;(e.currentTarget as HTMLButtonElement).style.background = "transparent"
+                  ; (e.currentTarget as HTMLButtonElement).style.background = "transparent"
               }}
             >
               {link.label}
@@ -104,29 +105,12 @@ export function MarketingHeader() {
         </nav>
 
         {/* CTA */}
-        <button
-          className="text-[14px] font-bold"
-          style={{
-            background: "#e11d48",
-            color: "#ffffff",
-            border: "none",
-            cursor: "pointer",
-            padding: "10px 28px",
-            borderRadius: "8px",
-            letterSpacing: "0.01em",
-            transition: "background 0.25s cubic-bezier(0.16,1,0.3,1), box-shadow 0.25s ease",
-          }}
-          onMouseEnter={e => {
-            (e.currentTarget as HTMLButtonElement).style.background = "#be123c"
-            ;(e.currentTarget as HTMLButtonElement).style.boxShadow = "0 4px 16px rgba(225,29,72,0.3)"
-          }}
-          onMouseLeave={e => {
-            (e.currentTarget as HTMLButtonElement).style.background = "#e11d48"
-            ;(e.currentTarget as HTMLButtonElement).style.boxShadow = "none"
-          }}
+        <Link
+          href="/login"
+          className="inline-flex items-center justify-center text-[14px] font-bold text-white bg-[#e11d48] px-7 py-2.5 rounded-lg tracking-[0.01em] transition-all duration-300 ease-out hover:bg-[#be123c] hover:shadow-[0_4px_16px_rgba(225,29,72,0.3)]"
         >
           Entrar
-        </button>
+        </Link>
       </div>
     </motion.header>
   )
